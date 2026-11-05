@@ -1,0 +1,51 @@
+{
+  "name": "dsh-chat-width",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness plugin: a General settings switch that spans the conversation across the full centre column.",
+  "license": "MIT",
+  "author": "luxi78",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luxi78/dsh-chat-width.git"
+  },
+  "homepage": "https://github.com/luxi78/dsh-chat-width#readme",
+  "bugs": {
+    "url": "https://github.com/luxi78/dsh-chat-width/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "conversation",
+    "width",
+    "layout"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings-general"
+      ]
+    }
+  }
+}
