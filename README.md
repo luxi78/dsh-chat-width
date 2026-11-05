@@ -14,6 +14,12 @@ Ask the Harness agent to install the bundle, pointing at this repository:
 plugin_manager(action: "install_bundle", target: "github:luxi78/dsh-chat-width")
 ```
 
+Pin a release instead of tracking `main`:
+
+```
+plugin_manager(action: "install_bundle", target: "github:luxi78/dsh-chat-width#v1.0.0")
+```
+
 Or clone it and install from the local directory:
 
 ```bash
@@ -25,6 +31,9 @@ plugin_manager(action: "install_bundle", target: "<absolute path to the clone>")
 ```
 
 Then open **Settings → General** and flip **Full-width chat**. That entry also appears in the plugin list, where it can be disabled or uninstalled later.
+
+> Installing replaces any earlier copy of this plugin in the same profile, and the running page picks up a fresh copy after a reload.
+
 
 ## How it works
 
